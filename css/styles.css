@@ -8,7 +8,7 @@
   --border-radius: 30px;
 }
 
-*, 
+*,
 *::after,
 *::before {
   box-sizing: border-box;
@@ -82,7 +82,7 @@ a {
 }
 
 .link-arrow::after {
-  content: '-->';
+  content: "-->";
   margin-left: 5px;
   transition: margin 0.25s;
 }
@@ -102,7 +102,7 @@ a {
 .badge {
   border-radius: 20px;
   font-size: 2rem;
-  font-weight: 600; 
+  font-weight: 600;
   padding: 0.5rem 2rem;
   white-space: nowrap;
 }
@@ -119,6 +119,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -194,6 +195,7 @@ a {
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
+  outline: 0;
 }
 
 .btn--primary {
@@ -279,5 +281,81 @@ a {
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
+  }
+}
+
+/* Cards */
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: white;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+/* Plans */
+
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
   }
 }
